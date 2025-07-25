@@ -28,8 +28,6 @@ app.use(express.json());
 const server = http.createServer(app); 
 initSocket(server);    
 
-console.log("🚀 MONGO_URI =", config.mongoUri);
-
 mongoose
   .connect(config.mongoUri!)
   .then(() => console.log('✅ MongoDB Connected'))
